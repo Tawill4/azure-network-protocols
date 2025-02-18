@@ -102,3 +102,21 @@ Initiate a constant ping of the Ubuntu VM's private IP address, then go back int
 Back in the Windows 10 VM, change the Wireshark filter to only show DHCP traffic. Then open Powershell as an administrator to try and renew the IP address.. do this by running this command; "ipconfig /renew", note the request and ack traffic in wireshark.
 </p>
 <br />
+
+<p>
+<img src="https://i.imgur.com/IeJrj3b.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/mksT8HA.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Switch the filter to track DNS traffic inside wireshark and use nslookup to find disney.com's IP address, see the traffic inside wireshark.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/Vx5ZfzX.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/sq0e0Uw.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Once more, filter wireshark to observe RDP (remote desktop) traffic. Type in tcp.port == 3389 and observe the spam of traffic. The reason this doesnt require any action to start giving feedback, is because we are actively USING RDP so it sends nonstop traffic.
+</p>
+<br />
