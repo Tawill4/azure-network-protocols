@@ -18,6 +18,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 - Various Network Protocols (SSH, RDH, DNS, HTTP/S, ICMP)
 - Wireshark (Protocol Analyzer)
 
+
 <h2>Operating Systems Used </h2>
 
 - Windows 10 (21H2)
@@ -25,10 +26,12 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <h2>High-Level Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Create a Resource Group and two Virtual Machines. (one windows 10, one Ubuntu / Linux).
+- In windows 10 VM, download wireshark.
+- Grab the Ubuntu VM's private IP address, then go into Windows 10 VM and filter ICMP traffic only inside wireshark
+- Ping the Private IP address you grabbed and observe the traffic inside wireshark.
+- Initiate a constant ping inside command prompt, then go into azure to deny incoming ICPM traffic in the network security groups
+- Observe the constant ping is disrupted as well as the traffic in wireshark only sending out requests with no reply
 
 <h2>Actions and Observations</h2>
 
